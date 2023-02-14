@@ -40,7 +40,7 @@ library(PRFgrowth)
 ```
 
 
-## References
+##   References
 
 
 Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A., 2022. Harmonizing multi-temporal airborne laser scanning point clouds to derive periodic annual height increments in temperate mixedwood forests. Can. J. For. Res. 52, 1334–1352.

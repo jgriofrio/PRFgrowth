@@ -17,7 +17,7 @@
 #' @importFrom dplyr mutate
 #' @importFrom dplyr case_when
 #' @return Height at time 1 H1
-#' @export Hgrowth
+#' @export
 #'
 #' @examples dat<-read.csv('dat.csv')
 #' Hgrowth(df,ForT=df$ForType,H0=df$H0,Dt=7)
