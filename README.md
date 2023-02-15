@@ -27,10 +27,14 @@ length, respectively.
 
 ``` r
 library(PRFgrowth)
-## basic example code
+
+sampledat
+
+Hdat<-Hgrowth(sampledat,ForT=sampledat$ForType,H0=sampledat$H0,Dt=7)
+HGindex(df=Hdat,ForT=Hdat$ForType,H0=Hdat$H0,H1=Hdat$H1,Hr=15,Dt=7)
 ```
 
-\##References
+## References
 
 Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A.,
 2022. Harmonizing multi-temporal airborne laser scanning point clouds to
