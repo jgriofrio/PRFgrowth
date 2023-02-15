@@ -27,6 +27,7 @@ length, respectively.
 
 ``` r
 library(PRFgrowth)
+libraty(dplyr)
 
 sampledat
 
