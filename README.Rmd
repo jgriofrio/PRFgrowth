@@ -36,6 +36,12 @@ The functions `Hgrowth` and `HGindex` return the estimate of the height growth a
 
 ```{r example}
 library(PRFgrowth)
+
+sampledat
+
+Hdat<-Hgrowth(sampledat,ForT=sampledat$ForType,H0=sampledat$H0,Dt=7)
+HGindex(df=Hdat,ForT=Hdat$ForType,H0=Hdat$H0,H1=Hdat$H1,Hr=15,Dt=7)
+
 ## basic example code
 ```
 
@@ -45,6 +51,6 @@ library(PRFgrowth)
 
 Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A., 2022. Harmonizing multi-temporal airborne laser scanning point clouds to derive periodic annual height increments in temperate mixedwood forests. Can. J. For. Res. 52, 1334–1352.
 
-Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A., 2023. Modelling height growth of temparate mixedwood forests using an age-independent apporach and multiu-temporal airborne laser scanning data .
+Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A., 2023. Modelling height growth of temparate mixedwood forests using an age-independent apporach and multiu-temporal airborne laser scanning data.
 
 

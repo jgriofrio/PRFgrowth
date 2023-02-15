@@ -1,8 +1,3 @@
-#
-# Hgrowth_model<-read.csv('Hgrowth_coeff.csv')
-# dat<-read.csv('dat.csv')
-
-
 #' Height growth rate index estimation
 #' @description Estimate height growth index based on the height increment and at height reference
 #' @param df dataframe with input values
@@ -33,4 +28,3 @@ HGindex<-function(df,ForT,H0,H1,Hr,Dt){
                   TRUE ~ as.numeric(NA)))
 }
 
-#HGindex(df=dat2,ForT=dat2$ForType,H1=dat2$H1,H2=dat2$H2,Hr=15,Dt=7)

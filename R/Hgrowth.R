@@ -1,12 +1,3 @@
-
-# MISTR_coef$SI_equations
-# MISTR_coef$H_equations
-# MISTR_coef$species_model_selection
-#
-# Hgrowth_model<-read.csv('Hgrowth_coeff.csv')
-# dat<-read.csv('dat.csv')
-
-
 #' Height growth estimation
 #'
 #' @description Estimate the height at time 1 based on initial height and period length. See manuscript describing the modeling approach
@@ -19,8 +10,7 @@
 #' @return Height at time 1 H1
 #' @export
 #'
-#' @examples dat<-read.csv('dat.csv')
-#' Hgrowth(df,ForT=df$ForType,H0=df$H0,Dt=7)
+#' @examples Hgrowth(sampledat,ForT=sampledat$ForType,H0=sampledat$H0,Dt=7)
 
 Hgrowth<-function(df,ForT,H0,Dt){
 

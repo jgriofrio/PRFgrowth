@@ -22,6 +22,5 @@ Height at time 1 H1
 Estimate the height at time 1 based on initial height and period length. See manuscript describing the modeling approach
 }
 \examples{
-dat<-read.csv('dat.csv')
-Hgrowth(df,ForT=df$ForType,H0=df$H0,Dt=7)
+Hgrowth(sampledat,ForT=sampledat$ForType,H0=sampledat$H0,Dt=7)
 }
