@@ -31,8 +31,6 @@
 
 #Hgrowth(df=dat[c(1,2)],ForT=dat$ForType,H1=dat$H1,Dt=7)
 
-#dat2<-Hgrowth(df=dat[c(1,2)],ForT=dat$ForType,H1=dat$H1,Dt=7)
-
 
 Hmodel <- function(H0, ForT,Dt) {
 

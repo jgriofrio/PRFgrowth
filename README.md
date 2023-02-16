@@ -47,10 +47,12 @@ length, respectively.
 library(PRFgrowth)
 libraty(dplyr)
 
-sampledat
+#sampledat
 
-Hdat<-Hgrowth(sampledat,ForT=sampledat$ForType,H0=sampledat$H0,Dt=7)
-HGindex(df=Hdat,ForT=Hdat$ForType,H0=Hdat$H0,H1=Hdat$H1,Hr=15,Dt=7)
+Hmodel(H0=10, ForT='PJ',Dt=7)
+
+HGSIndex(H0=10, H1=15, ForT='PJ',Hr=15,Dt=7)
+
 ```
 
 ## References

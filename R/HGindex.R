@@ -29,7 +29,7 @@
 #                   ForT== 'OR' ~ ((H1-H0)/Dt)*(Hr/H0)*((((33.1844)/Hr)^0.8118)-1)/(((33.1844/H0)^0.7080)-1),
 #                   TRUE ~ as.numeric(NA)))
 # }
-
+#HGindex(df=Hdat,ForT=Hdat$ForType,H0=Hdat$H0,H1=Hdat$H1,Hr=15,Dt=7)
 
 HGSIndex <- function(H0, H1, ForT,Hr,Dt) {
 
