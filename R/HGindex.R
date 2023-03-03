@@ -1,6 +1,5 @@
 #' Height growth rate index estimation
 #' @description Estimate height growth index based on the height increment and at height reference
-#' @param df dataframe with input values
 #' @param ForT Forest type identification codes.
 #' @param H0 height at time 0
 #' @param H1 height at time 1

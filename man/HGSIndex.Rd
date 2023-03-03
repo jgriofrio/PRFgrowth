@@ -16,8 +16,6 @@ HGSIndex(H0, H1, ForT, Hr, Dt)
 \item{Hr}{Height reference}
 
 \item{Dt}{period length (years)}
-
-\item{df}{dataframe with input values}
 }
 \value{
 height growth rate index

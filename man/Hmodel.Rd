@@ -12,8 +12,6 @@ Hmodel(H0, ForT, Dt)
 \item{ForT}{Forest type identification codes.}
 
 \item{Dt}{period length (years)}
-
-\item{df}{dataframe with input values}
 }
 \value{
 Height value at time 1 (H1) in meters

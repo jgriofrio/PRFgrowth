@@ -1,7 +1,6 @@
 #' Height growth estimation
 #'
 #' @description Estimate the height at time 1 based on initial height and period length. See manuscript describing the modeling approach
-#' @param df dataframe with input values
 #' @param ForT Forest type identification codes.
 #' @param H0 height at time 0
 #' @param Dt period length (years)

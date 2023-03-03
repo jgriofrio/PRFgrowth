@@ -7,18 +7,11 @@
 <!-- badges: end -->
 
 Implementation of age-independent height growth and height growth-rate
-models for mixedwood forest in the Petawawa Research Forest.
+models for mixedwood forest in the Petawawa Research Forest (PRF). 
 
-## Installation
-
-You can install the development version of PRFgrowth like so:
+Functions implemented generate estimates of final height and a growth-rate index as a proxy of site quality for different forest types including plantations, natural managed and undamaged stands with complex forest structures and species compilations in the PRF.
 
 
-``` r
-install.packages("devtools")
-devtools::install_github("jgriofrio/PRFgrowth")
-library(PRFgrowth)
-```
 ## Forest type identification codes
 
 <!-- TABLE_GENERATE_START -->
@@ -37,17 +30,23 @@ library(PRFgrowth)
 
 <!-- TABLE_GENERATE_END -->
 
+## Installation
+
+You can install the development version of PRFgrowth like so:
+
+``` r
+install.packages("devtools")
+devtools::install_github("jgriofrio/PRFgrowth")
+library(PRFgrowth)
+```
+
 ## Example
 
-The functions `Hgrowth` and `HGindex` return the estimate of the height
-growth and growth rate index at reference height for a given period
-length, respectively.
+The functions `Hgrowth` and `HGSIndex` return the estimate of the final height
+and growth rate index at reference height for a given period length, respectively.
 
 ``` r
 library(PRFgrowth)
-libraty(dplyr)
-
-#sampledat
 
 Hmodel(H0=10, ForT='PJ',Dt=7)
 

@@ -1,0 +1,59 @@
+---
+title: "HeightModelsPRF"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{HeightModelsPRF}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## PRFgrowth package
+
+`PRFgrowth` is the implementation of growth functions development from repeat LiDAR at the Petawawa Research Forest. 
+
+Currently, two functions are available, `Hgrowth` returns the estimate of the final top height and `HGSIndex` calculate the height growth rate index at reference height for a given period.  
+
+`HGSIndex` provides a comprehensive indicator of site quality based on age-independent height growth models `Hgrowth` for  various forest types in the Great Lakes–St. Lawrence forest region in southern Ontario, Canada. 
+
+````{r echo=FALSE}
+f<- c('White Spruce','Jack Pine','White Pine','Red Pine','Mixedwood conifer','Mixedwood hardwood','Intolerant hardwood','Tolerant hardwood','Red Oak')
+
+cod<- c('SW','PJ','PW','PR','MXC','MXH', 'INT','HD','OR')
+
+des<- c('Planted white spruce stands with various initial densities and subsequent management activities, in some cases with an understory of poplar and hardwoods','Naturally occurring and planted jack pine stands at various densities','Stands dominated by white pine covering a range of plantations and managed and unmanaged natural stands in a mixture of red pine and an understory of other tree species','Natural and managed stands dominated by red pine','Mixed species conifer stands with a range of species proportions dominated by black spruce, white spruce and balsam fir','Hardwood mixed species stands with various species proportions of red maple, poplar and white spruce, with a lesser component of yellow birch, oak','Natural stands dominated by poplar (large-tooth and trembling aspen leading) and often mixed with other hardwoods and conifers','Stands covering a range of structures and associated species (sugar maple, yellow birch, with a lesser component of red maple, beech, oak, hemlock, spruce and balsam fir)','Natural immature and mature oak dominant and oak-pine mixed stands, often with an understory of poplar and hardwoods')
+
+df <- data.frame(Forest= f, Code = cod, Description=des)
+
+knitr::kable(df, align = "c")
+````
+
+The under development version of PRFgrowth can be installed like so:
+
+```{r,warning=F,message=F}
+#install.packages("devtools")
+devtools::install_github("jgriofrio/PRFgrowth")
+library(PRFgrowth)
+```
+
+### `Hgrowth` {#Hgrowth .unnumbered}
+
+`Hgrowth` estimates the final top height based on initial height `H0` and period length `Dt`. the function allows for the prediction of height increments for different period lengths and for obtaining instantaneous growth estimates based on height as a state variable instead of age.
+
+```{r,warning=F,message=F}
+Hmodel(H0=10, ForT='PJ',Dt=7)
+```
+
+### `HGSIndex` {#HGindex .unnumbered}
+
+`HGSIndex` estimates the height growth index based on the height increment `(H1-H0)/Dt` and at height reference `Hr`. `H1` and `H0` are top height at the final and beginning of the growth period,`Dt` is the period length. `Hr` is arbitrary and user defined value analogous to the reference age for height-age site index models. The selected reference height is a balance between the size at which the most dominant trees would have surpassed the initial period of intense competition following their establishment and a height that can be conveniently measured.
+
+```{r,warning=F,message=F}
+HGSIndex(H0=10, H1=15, ForT='PJ',Hr=15,Dt=7)
+```
