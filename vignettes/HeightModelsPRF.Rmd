@@ -38,7 +38,7 @@ The under development version of PRFgrowth can be installed like so:
 
 ```{r,warning=F,message=F}
 #install.packages("devtools")
-devtools::install_github("jgriofrio/PRFgrowth")
+#devtools::install_github("jgriofrio/PRFgrowth")
 library(PRFgrowth)
 ```
 
