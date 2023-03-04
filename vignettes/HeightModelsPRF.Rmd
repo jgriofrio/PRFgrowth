@@ -16,9 +16,9 @@ knitr::opts_chunk$set(
 
 ## PRFgrowth package
 
-`PRFgrowth` is the implementation of growth functions development from repeat LiDAR at the Petawawa Research Forest. 
+`PRFgrowth` is the implementation of growth functions developed from repeat airborne laser scanning acquisitions at the Petawawa Research Forest. 
 
-Currently, two functions are available, `Hgrowth` returns the estimate of the final top height and `HGSIndex` calculate the height growth rate index at reference height for a given period.  
+Currently, two functions are available, `Hgrowth` returns the estimate of the final top height and `HGSIndex` calculates the height growth rate index at a reference height for a given period.  
 
 `HGSIndex` provides a comprehensive indicator of site quality based on age-independent height growth models `Hgrowth` for  various forest types in the Great Lakes–St. Lawrence forest region in southern Ontario, Canada. 
 

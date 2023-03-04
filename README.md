@@ -9,7 +9,7 @@
 Implementation of age-independent height growth and height growth-rate
 models for mixedwood forest in the Petawawa Research Forest (PRF). 
 
-Functions implemented generate estimates of final height and a growth-rate index as a proxy of site quality for different forest types including plantations, natural managed and undamaged stands with complex forest structures and species compilations in the PRF.
+Functions implemented generate estimates of final height and a growth-rate index as a proxy of site quality for different forest types including plantations, natural managed and undamaged stands with complex forest structures and species compositions in the PRF.
 
 
 ## Forest type identification codes
