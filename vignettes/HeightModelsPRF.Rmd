@@ -57,3 +57,16 @@ Hmodel(H0=10, ForT='PJ',Dt=7)
 ```{r,warning=F,message=F}
 HGSIndex(H0=10, H1=15, ForT='PJ',Hr=15,Dt=7)
 ```
+
+
+### References
+
+Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A.,
+2022. Harmonizing multi-temporal airborne laser scanning point clouds to
+derive periodic annual height increments in temperate mixedwood forests.
+[Can. J. For. Res. 52, 1334–1352.](https://cdnsciencepub.com/doi/10.1139/cjfr-2022-0055)
+
+Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A.,
+2023. Modelling height growth of temparate mixedwood forests using an
+age-independent approach and multi-temporal airborne laser scanning
+data. For. Eco. Manag. (in press).

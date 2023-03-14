@@ -2,11 +2,33 @@ Package: PRFgrowth
 Type: Package
 Title: Height growth and height growth rate index
 Version: 0.1.0
-Author: Jose Riofrio <jose.g.riofrio@gmail.com>
+Authors@R: c(
+    person(given = "Jose", 
+           family = "Riofrio",
+           email = "jose.g.riofrio@gmail.com",
+           role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0003-2278-2851")),
+    person(given = "Piotr", 
+           family = "Tompalski",
+           email = "piotr.tompalski@NRCan-RNCan.gc.ca", 
+           role = "aut",
+           comment = c(ORCID = "0000-0002-5841-6530")),
+    person(given = "Joanne C.", 
+           family = "White",
+           email = "joanne.white@NRCan-RNCan.gc.ca", 
+           role = "aut",
+           comment = c(ORCID = "0000-0003-4674-0373")),       
+    person(given = "Nicholas C", 
+           family = "Coops",
+           email = "nicholas.coops@ubc.ca", 
+           role = "aut",
+           comment = c(ORCID = "0000-0002-0151-9037"))
+    )
 Maintainer: Jose Riofrio <jose.g.riofrio@gmail.com>
 Description: Estimate height growth and growth rate index for 
             mixedwoods in Petawawa Research Forest.
-License: MIT + file LICENSE
+License: GPL-3
+URL: https://github.com/jgriofrio/PRFgrowth
 Encoding: UTF-8
 LazyData: true
 Imports: 

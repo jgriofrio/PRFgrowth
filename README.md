@@ -63,5 +63,11 @@ Can. J. For. Res. 52, 1334–1352.
 
 Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A.,
 2023. Modelling height growth of temparate mixedwood forests using an
-age-independent apporach and multiu-temporal airborne laser scanning
-data .
+age-independent approach and multi-temporal airborne laser scanning
+data. For. Eco. Manag. (in press).
+
+
+## Funding
+
+Ongoing development of PRFgrowth is supported with funds from the Canadian Wood Fibre Centre (CWFC) of the Canadian Forest
+Service. 
