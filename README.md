@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# PRFgrowth
+# PRFgrowth - Height and height growth rate models for mixedwoods in the Petawawa Reasearch Forest"
 
 <!-- badges: start -->
 <!-- badges: end -->
