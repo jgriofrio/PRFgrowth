@@ -78,6 +78,7 @@ HGSIndex(H0=10, H1=15, ForT='PJ',Hr=15,Dt=7)
 | [Piotr Tompalski](https://scholar.google.ca/citations?user=RtYdz0cAAAAJ&hl=en/) | Canadian Forest Service        |
 | [Nicholas Coops](https://scholar.google.ca/citations?user=XvUF8dUAAAAJ&hl=es/)  | University of British Columbia |
 
+
 ### References
 
 Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A.,
