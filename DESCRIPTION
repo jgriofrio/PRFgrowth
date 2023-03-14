@@ -27,7 +27,7 @@ Authors@R: c(
 Maintainer: Jose Riofrio <jose.g.riofrio@gmail.com>
 Description: Estimate height growth and growth rate index for 
             mixedwoods in Petawawa Research Forest.
-License: GPL-3
+License: GPL (>= 3)
 URL: https://github.com/jgriofrio/PRFgrowth
 Encoding: UTF-8
 LazyData: true

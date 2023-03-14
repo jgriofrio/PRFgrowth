@@ -13,44 +13,84 @@ knitr::opts_chunk$set(
 )
 ```
 
-# PRFgrowth
+# "PRFgrowth - Height and height growth rate models for mixedwoods in the Petawawa Reasearch Forest"
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-Implementation of age-independent height growth and height growth-rate models for mixedwood forest in the Petawawa Research Forest.  
+## Package description
 
-## Installation
+`PRFgrowth` is the implementation of growth functions developed from repeat airborne laser scanning acquisitions at the Petawawa Research Forest. 
 
-You can install the development version of PRFgrowth like so:
+Currently, two functions are available, `Hgrowth` returns the estimate of the final top height and `HGSIndex` calculates the height growth rate index at a reference height for a given period.  
 
-``` r
-install.packages("devtools")
-devtools::install_github("jgriofrio/PRFgrowth")
+`HGSIndex` provides a comprehensive indicator of site quality based on age-independent height growth models `Hgrowth` for  various forest types in the Great Lakes–St. Lawrence forest region in southern Ontario, Canada. 
+
+````{r echo=FALSE}
+f<- c('White Spruce','Jack Pine','White Pine','Red Pine','Mixedwood conifer','Mixedwood hardwood','Intolerant hardwood','Tolerant hardwood','Red Oak')
+
+cod<- c('SW','PJ','PW','PR','MXC','MXH', 'INT','HD','OR')
+
+des<- c('Planted white spruce stands with various initial densities and subsequent management activities, in some cases with an understory of poplar and hardwoods','Naturally occurring and planted jack pine stands at various densities','Stands dominated by white pine covering a range of plantations and managed and unmanaged natural stands in a mixture of red pine and an understory of other tree species','Natural and managed stands dominated by red pine','Mixed species conifer stands with a range of species proportions dominated by black spruce, white spruce and balsam fir','Hardwood mixed species stands with various species proportions of red maple, poplar and white spruce, with a lesser component of yellow birch, oak','Natural stands dominated by poplar (large-tooth and trembling aspen leading) and often mixed with other hardwoods and conifers','Stands covering a range of structures and associated species (sugar maple, yellow birch, with a lesser component of red maple, beech, oak, hemlock, spruce and balsam fir)','Natural immature and mature oak dominant and oak-pine mixed stands, often with an understory of poplar and hardwoods')
+
+df <- data.frame(Forest= f, Code = cod, Description=des)
+
+knitr::kable(df, align = "c")
+````
+
+The under development version of PRFgrowth can be installed like so:
+
+```{r,warning=F,message=F}
+#install.packages("devtools")
+#devtools::install_github("jgriofrio/PRFgrowth")
 library(PRFgrowth)
 ```
 
-## Example
+### `Hgrowth` {#Hgrowth .unnumbered}
 
-The functions `Hgrowth` and `HGindex` return the estimate of the height growth and growth rate index at reference height for a given period length, respectively.
+`Hgrowth` estimates the final top height based on initial height `H0` and period length `Dt`. the function allows for the prediction of height increments for different period lengths and for obtaining instantaneous growth estimates based on height as a state variable instead of age.
 
-```{r example}
-library(PRFgrowth)
-
-sampledat
-
-Hdat<-Hgrowth(sampledat,ForT=sampledat$ForType,H0=sampledat$H0,Dt=7)
-HGindex(df=Hdat,ForT=Hdat$ForType,H0=Hdat$H0,H1=Hdat$H1,Hr=15,Dt=7)
-
-## basic example code
+```{r,warning=F,message=F}
+Hmodel(H0=10, ForT='PJ',Dt=7)
 ```
 
+### `HGSIndex` {#HGindex .unnumbered}
 
-##   References
+`HGSIndex` estimates the height growth index based on the height increment `(H1-H0)/Dt` and at height reference `Hr`. `H1` and `H0` are top height at the final and beginning of the growth period,`Dt` is the period length. `Hr` is arbitrary and user defined value analogous to the reference age for height-age site index models. The selected reference height is a balance between the size at which the most dominant trees would have surpassed the initial period of intense competition following their establishment and a height that can be conveniently measured.
 
+```{r,warning=F,message=F}
+HGSIndex(H0=10, H1=15, ForT='PJ',Hr=15,Dt=7)
+```
 
-Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A., 2022. Harmonizing multi-temporal airborne laser scanning point clouds to derive periodic annual height increments in temperate mixedwood forests. Can. J. For. Res. 52, 1334–1352.
+## Authors
 
-Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A., 2023. Modelling height growth of temparate mixedwood forests using an age-independent apporach and multiu-temporal airborne laser scanning data.
+```{r,echo=FALSE, results = 'asis'}
+library(knitr)
+names <- c("Jose Riofrio", "Joanne C. White", "Piotr Tompalski", "Nicholas Coops")
 
+aff <- c("University of British Columbia", "Canadian Forest Service", "Canadian Forest Service", "University of British Columbia")
 
+urls <- c(
+  "https://scholar.google.com/citations?user=wpicZNsAAAAJ&hl=es",
+  "https://scholar.google.ca/citations?user=bqjk4skAAAAJ&hl=en/",
+  "https://scholar.google.ca/citations?user=RtYdz0cAAAAJ&hl=en/",
+  "https://scholar.google.ca/citations?user=XvUF8dUAAAAJ&hl=es/"
+)
+
+df <- data.frame(Author = names, Affiliation = aff)
+
+df$Author <- paste0("[", df$Author, "](", urls, ")")
+
+kable(df)
+```
+### References
+
+Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A.,
+2022. Harmonizing multi-temporal airborne laser scanning point clouds to
+derive periodic annual height increments in temperate mixedwood forests.
+[Can. J. For. Res. 52, 1334–1352.](https://cdnsciencepub.com/doi/10.1139/cjfr-2022-0055)
+
+Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A.,
+2023. Modelling height growth of temparate mixedwood forests using an
+age-independent approach and multi-temporal airborne laser scanning
+data. For. Eco. Manag. (in press).
