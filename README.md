@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# PRFgrowth - Height and height growth rate models for mixedwoods in the Petawawa Reasearch Forest"
+# PRFgrowth - Height and height growth rate models for mixedwoods in the Petawawa Research Forest"
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -18,7 +18,7 @@ index at a reference height for a given period.
 
 `HGSIndex` provides a comprehensive indicator of site quality based on
 age-independent height growth models `Hgrowth` for various forest types
-in the Great Lakes–St. Lawrence forest region in southern Ontario,
+in the Great Lakes–St. Lawrence Forest region in southern Ontario,
 Canada.
 
 |       Forest        | Code |                                                                                Description                                                                                 |
@@ -33,7 +33,7 @@ Canada.
 |  Tolerant hardwood  |  HD  | Stands covering a range of structures and associated species (sugar maple, yellow birch, with a lesser component of red maple, beech, oak, hemlock, spruce and balsam fir) |
 |       Red Oak       |  OR  |                            Natural immature and mature oak dominant and oak-pine mixed stands, often with an understory of poplar and hardwoods                            |
 
-The under development version of PRFgrowth can be installed like so:
+The under-development version of PRFgrowth can be installed like so:
 
 ``` r
 #install.packages("devtools")
@@ -43,9 +43,9 @@ library(PRFgrowth)
 
 ### `Hgrowth`
 
-`Hgrowth` estimates the final top height based on initial height `H0`
-and period length `Dt`. the function allows for the prediction of height
-increments for different period lengths and for obtaining instantaneous
+`Hgrowth` estimates the final top height based on the initial height `H0`
+and period length `Dt`. The function allows for predicting height
+increments for different period lengths and obtaining instantaneous
 growth estimates based on height as a state variable instead of age.
 
 ``` r
@@ -57,8 +57,8 @@ Hmodel(H0=10, ForT='PJ',Dt=7)
 
 `HGSIndex` estimates the height growth index based on the height
 increment `(H1-H0)/Dt` and at height reference `Hr`. `H1` and `H0` are
-top height at the final and beginning of the growth period,`Dt` is the
-period length. `Hr` is arbitrary and user defined value analogous to the
+the top height at the final and beginning of the growth period,`Dt` is the
+period length. `Hr` is an arbitrary and user-defined value analogous to the
 reference age for height-age site index models. The selected reference
 height is a balance between the size at which the most dominant trees
 would have surpassed the initial period of intense competition following
@@ -88,10 +88,10 @@ derive periodic annual height increments in temperate mixedwood forests.
 1334–1352.](https://cdnsciencepub.com/doi/10.1139/cjfr-2022-0055)
 
 Riofrío, J., White, J.C., Tompalski, P., Coops, N.C., Wulder, M.A.,
-2023. Modelling height growth of temparate mixedwood forests using an
+2023. Modelling height growth of temperate mixedwood forests using an
 age-independent approach and multi-temporal airborne laser scanning
-data. For. Eco. Manag. (in press).
+data. [For. Eco. Manag. 543](https://www.sciencedirect.com/science/article/pii/S0378112723003717).
 
 ### Funding 
 Ongoing development of PRFgrowth was supported with funds from the Canadian Wood Fibre Centre (CWFC) of the Canadian Forest
-635 Service. 
+Service. 
