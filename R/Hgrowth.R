@@ -12,7 +12,7 @@
 #' @examples
 #' Hmodel(H0=10, ForT='PJ',Dt=7)
 
-# Hgrowth<-function(df,ForT,H0,Dt){
+# Hmodel<-function(df,ForT,H0,Dt){
 #
 #      df %>%
 #         dplyr:: mutate(H1 = case_when(
@@ -28,7 +28,7 @@
 #           TRUE ~ as.numeric(NA)))
 # }
 
-#Hgrowth(df=dat[c(1,2)],ForT=dat$ForType,H1=dat$H1,Dt=7)
+#Hmodel(df=dat[c(1,2)],ForT=dat$ForType,H1=dat$H1,Dt=7)
 
 
 Hmodel <- function(H0, ForT,Dt) {
