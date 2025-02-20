@@ -12,7 +12,7 @@
 repeat airborne laser scanning acquisitions at the Petawawa Research
 Forest.
 
-Currently, two functions are available, `Hgrowth` returns the estimate
+Currently, two functions are available, `Hmodel` returns the estimate
 of the final top height and `HGSIndex` calculates the height growth rate
 index at a reference height for a given period.
 
@@ -41,9 +41,9 @@ The under-development version of PRFgrowth can be installed like so:
 library(PRFgrowth)
 ```
 
-### `Hgrowth`
+### `Hmodel`
 
-`Hgrowth` estimates the final top height based on the initial height `H0`
+`Hmodel` estimates the final top height based on the initial height `H0`
 and period length `Dt`. The function allows for predicting height
 increments for different period lengths and obtaining instantaneous
 growth estimates based on height as a state variable instead of age.
