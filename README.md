@@ -17,7 +17,7 @@ of the final top height and `HGSIndex` calculates the height growth rate
 index at a reference height for a given period.
 
 `HGSIndex` provides a comprehensive indicator of site quality based on
-age-independent height growth models `Hgrowth` for various forest types
+age-independent height growth models `Hmodel` for various forest types
 in the Great Lakes–St. Lawrence Forest region in southern Ontario,
 Canada.
 
